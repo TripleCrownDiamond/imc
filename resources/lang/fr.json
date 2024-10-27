@@ -1,0 +1,20 @@
+{
+    "register": {
+      "title": "Inscription",
+      "name": "Nom",
+      "email": "E-mail",
+      "password": "Mot de passe",
+      "confirm_password": "Confirmer le mot de passe",
+      "already_registered": "Déjà inscrit ?",
+      "register_button": "S'inscrire"
+    },
+    "login": {
+      "title": "Connexion",
+      "email": "E-mail",
+      "password": "Mot de passe",
+      "remember_me": "Se souvenir de moi",
+      "login_button": "Connexion",
+      "forgot_password": "Mot de passe oublié ?"
+    }
+  }
+  
