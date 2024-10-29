@@ -19,21 +19,18 @@ class RunMigrationsAndSeed extends Command
      *
      * @var string
      */
-    protected $description = 'Rollback, migrate and seed the database'; // Description de la commande
+    protected $description = 'Refresh, migrate, and seed the database'; // Description de la commande
 
     /**
      * Execute the console command.
      */
-    public function handle():void
+    public function handle(): void
     {
-        $this->info('Rolling back migrations...');
-        Artisan::call('migrate:rollback');
-        
-        $this->info('Running migrations...');
-        Artisan::call('migrate');
+        $this->info('Refreshing the database...');
+        Artisan::call('migrate:fresh'); // Supprime toutes les tables et relance les migrations
         
         $this->info('Seeding the database...');
-        Artisan::call('db:seed');
+        Artisan::call('db:seed'); // Exécute les seeders
 
         $this->info('All operations completed successfully!');
     }

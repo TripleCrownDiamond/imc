@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('uniq_id', 8)->unique()->after('id'); // Identifiant unique de 8 caractères
+            $table->string('uniq_id', 36)->unique()->after('id'); // Identifiant unique de 36 caractères
         });
     }
 
